@@ -24,6 +24,9 @@ predictions =model.predict(x_test)
 #Evaluation
 print(classification_report(y_test,predictions))
 
+#confusion matrix
+cm = confusion_matrix(y_test,predictions)
+
 plt.figure(figsize=(6,4))
 sns.heatmap(cm,annot=True,fmt='d')
 plt.title("Confusion Matrix")
