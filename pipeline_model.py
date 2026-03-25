@@ -19,7 +19,10 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 # Scaling features and training model
 # Different features have different scales, and this can affect the performance of some ML algorithms.
 # Eg radius = 20, area = 1000, smoothness = 0.1, etc.
+# Pipeline allows us to chain multiple steps together, in this case, scaling and modeling,
+# so that we can treat them as a single unit. 
 # StandardScaler standardizes the features by removing the mean and scaling to unit variance eg -1.2, 0.5,1.8, etc.
+
 
 # max_iter=10000 is set to ensure that the logistic regression model has enough iterations to converge,
 # especially if the dataset is complex or if the default number of iterations (usually 100) is not sufficient 
